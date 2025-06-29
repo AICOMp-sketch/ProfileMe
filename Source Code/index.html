@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beautiful Profile Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="profile-container">
+    <img class="profile-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile Avatar">
+    <div class="profile-name">John Doe</div>
+    <div class="profile-title">Frontend Developer</div>
+    <div class="profile-bio">Passionate about crafting beautiful and user-friendly web experiences. Loves coffee and hiking.</div>
+    <div class="profile-actions">
+      <button onclick="openModal()">Edit Profile</button>
+      <button>Message</button>
+    </div>
+  </div>
+
+  <!-- Modal Window -->
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <h2>Edit Profile</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" value="John Doe">
+        <label for="title">Title</label>
+        <input type="text" id="title" value="Frontend Developer">
+        <label for="bio">Bio</label>
+        <textarea id="bio" rows="3">Passionate about crafting beautiful and user-friendly web experiences. Loves coffee and hiking.</textarea>
+        <button type="button" onclick="closeModal()" class="cancel">Cancel</button>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
